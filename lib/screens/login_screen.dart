@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:myapp/components/colorPagePrincipal.dart';
 import 'package:myapp/styles/colors.dart';
 
 class LoginScreen extends StatelessWidget {
@@ -7,9 +8,9 @@ class LoginScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: AppColors.blue,
       body: Stack(
         children: [
+          ColorPagePrincipal(),
           Padding(
             padding: const EdgeInsets.all(30.0),
             child: Column(
@@ -72,7 +73,7 @@ class LoginScreen extends StatelessWidget {
                       height: 55,
                       child: ElevatedButton(
                         onPressed: () {
-                          Navigator.pushReplacementNamed(context, "home");
+                          Navigator.pushReplacementNamed(context, "dashboard");
                         },
                         style: ButtonStyle(
                           backgroundColor: WidgetStatePropertyAll(AppColors.gold),
