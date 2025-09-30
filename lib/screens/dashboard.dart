@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:myapp/screens/info_screen.dart';
 import 'package:myapp/styles/colors.dart';
-import 'wallet.dart';
+import 'wallet_screen.dart';
 
 class Dashboard extends StatefulWidget {
   const Dashboard({super.key});

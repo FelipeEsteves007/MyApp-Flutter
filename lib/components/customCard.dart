@@ -2,18 +2,26 @@ import 'package:flutter/material.dart';
 import 'package:myapp/styles/colors.dart';
 
 class Customcard extends StatelessWidget {
-  const Customcard({super.key});
+  final String nome;
+  final String info;
+  const Customcard ( this.info, this.nome ,{super.key});
 
   @override
   Widget build(BuildContext context) {
     return Container(
-     color: AppColors.gold,
+      decoration: BoxDecoration(
+        borderRadius: BorderRadius.circular(15),
+        color: AppColors.gold,
+      ),
       child: Row(
         children: [
           Container(
             width: 90,
             height: 120,
-            decoration: BoxDecoration(color: AppColors.lightGray),
+            decoration: BoxDecoration(
+                color: AppColors.lightGray,
+                borderRadius: BorderRadius.circular(15)
+            ),
             margin: const EdgeInsets.only(right: 16),
           ),
           Column(
@@ -23,11 +31,11 @@ class Customcard extends StatelessWidget {
               Padding(
                 padding: const EdgeInsets.only(bottom: 6),
                 child: Text(
-                  'Titulo',
+                  nome,
                   style: TextStyle(fontSize: 18, color: AppColors.lightGray),
                 ),
               ),
-              Text('informações', style: TextStyle(color: AppColors.lightGray)),
+              Text(info, style: TextStyle(color: AppColors.lightGray)),
             ],
           ),
         ],
